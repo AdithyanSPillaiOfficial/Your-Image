@@ -1,22 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from './images/logo_round.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <img src={logo} alt="logo" className='logo'/>
+        <div className="searchbar-div">
+          <button onClick={()=>alert('Searching')} className='searchbutton'>
+            <FontAwesomeIcon icon={faSearch} className='searchicon'/>
+          </button>
+          <input type="text" placeholder='Search' className='searchbar'/>
+        </div>
       </header>
     </div>
   );
